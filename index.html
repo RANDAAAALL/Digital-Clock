@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js" defer></script>
+  <title>Digital Clock</title>
+</head>
+<style>
+  * {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+  }
+  .days-dates-contents-container{
+    border: 3px solid green;
+    border-radius: 5px;
+  }
+  .days-dates{
+    display: flex;
+  }
+  .title > p {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 25px;
+  }
+  .days,
+  .dates,
+  .contents{
+    padding: 20px;
+  }
+  .contents {
+    margin-top: 15px;
+  }
+  .contents,
+  .days,
+  .dates{
+    font-size: 30px;
+  }
+  @media screen and (max-width: 437px) and (min-width:320px){
+  .contents,
+  .days,
+  .dates{
+    font-size: 20px;
+  }
+  .title > p{
+    font-size: 35px;
+  }
+  }
+</style>
+
+<body>
+    <div class="contents-container">
+      <div class="title"><p> Philippine Time</p> </div>
+      <div class="days-dates-contents-container">
+        <div class="days-dates">
+          <div class="days"></div>
+          <div class="dates"></div>
+        </div>
+        <div class="contents"> 00:00:00</div>
+      </div>
+    </div>
+</body>
+</html>
