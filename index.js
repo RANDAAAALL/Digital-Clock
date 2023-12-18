@@ -28,10 +28,11 @@ function displayClock(){
   let mins = currentTime.getMinutes().toString().padStart(2, "0");
   let seconds = currentTime.getSeconds().toString().padStart(2, "0");
   
+  let amPm = hours > 12 ? "PM" : "AM";
   hours = hours > 12 ? hours - 12 : hours;
   hours = hours === 0 ? 12 : hours;
   
-  content.textContent = `${hours}:${mins}:${seconds} ${hours >= 12 ? "AM" : "PM"}`;
+  content.textContent = `${hours}:${mins}:${seconds} ${amPm}`;
   days.textContent = `${newDay}`
   dates.textContent = `${month} / ${date} / ${year}`;
 }
