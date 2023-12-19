@@ -24,15 +24,10 @@ function displayClock(){
     newDay = dayOfWeeks[day - 1];
   }
   let year = currentTime.getFullYear();
-  let hours = currentTime.getHours().toString().padStart(2, "0");
-  let mins = currentTime.getMinutes().toString().padStart(2, "0");
-  let seconds = currentTime.getSeconds().toString().padStart(2, "0");
+  let time = currentTime.toLocaleTimeString('en-PH', { hour12: true });
   
-  let amPm = hours > 11 && mins > 59 && seconds > 59 ? "AM" : "PM";
-  hours = hours > 12 ? hours - 12 : hours;
-  hours = hours === 0 ? 12 : hours;
   
-  content.textContent = `${hours}:${mins}:${seconds} ${amPm}`;
+  content.textContent = `${time}`;
   days.textContent = `${newDay}`
   dates.textContent = `${month} / ${date} / ${year}`;
 }
