@@ -28,7 +28,7 @@ function displayClock(){
   let mins = currentTime.getMinutes().toString().padStart(2, "0");
   let seconds = currentTime.getSeconds().toString().padStart(2, "0");
   
-  let amPm = hours > 12 ? "PM" : "AM";
+  let amPm = hours > 11 && mins > 59 && seconds > 59 ? "AM" : "PM";
   hours = hours > 12 ? hours - 12 : hours;
   hours = hours === 0 ? 12 : hours;
   
