@@ -18,14 +18,10 @@ function displayClock(){
   let month = currentTime.getMonth() + 1;
   let date = currentTime.getDate();
   let day = currentTime.getDay();
-  let newDay;
+  let newDay = (day >= 1 && day <= dayOfWeeks.length) ? dayOfWeeks[day - 1] : null;
 
-  if(day >= 1 && day <= dayOfWeeks.length){
-    newDay = dayOfWeeks[day - 1];
-  }
   let year = currentTime.getFullYear();
   let time = currentTime.toLocaleTimeString('en-PH', { hour12: true });
-  
   
   content.textContent = `${time}`;
   days.textContent = `${newDay}`
